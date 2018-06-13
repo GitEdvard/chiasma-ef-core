@@ -1,6 +1,10 @@
 ﻿using System;
+using System.Configuration;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Logging.Console;
+using DatabaseReferencing;
 
 namespace chiasma_ef_core.Data
 {
@@ -15,14 +19,29 @@ namespace chiasma_ef_core.Data
         {
         }
 
-        public virtual DbSet<Plate> Plate { get; set; }
+        public static readonly LoggerFactory MyConsoleLoggerFactory
+            = new LoggerFactory(new[] {
+              new ConsoleLoggerProvider((category, level)
+                => category == DbLoggerCategory.Database.Command.Name
+               && level == LogLevel.Information, true) });
+        //   public static readonly LoggerFactory MyConsoleLoggerFactory
+        //= new LoggerFactory(new[] { new ConsoleLoggerProvider((_, __) => true, true) });
+
+
+        public virtual DbSet<Plate> Plates { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("data source=130.238.178.226;integrated security=true;initial catalog=gtdb2_devel_ee;");
+                var dbReference = new DatabaseReference();
+                var dbName = dbReference.GenerateDatabaseName();
+                var conString = ConfigurationManager.ConnectionStrings["DevDb"].ConnectionString;
+                conString = conString.Replace("db_name", dbName);
+                optionsBuilder
+                    .UseLoggerFactory(MyConsoleLoggerFactory)
+                    .EnableSensitiveDataLogging(true)
+                    .UseSqlServer(conString);
             }
         }
 
