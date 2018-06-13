@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using chiasma_ef_core.Data;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System;
 
 namespace chiasma_ef_core
 {
@@ -10,6 +8,11 @@ namespace chiasma_ef_core
     {
         static void Main(string[] args)
         {
+            var context = new gtdb2_devel_eeContext();
+            var plate = context.Plates.FirstOrDefault();
+            Console.WriteLine(plate.Identifier);
+            Console.WriteLine("Write any key...");
+            Console.ReadLine();
         }
     }
 }

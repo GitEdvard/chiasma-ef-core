@@ -15,7 +15,7 @@ namespace chiasma_ef_core.Data
         {
         }
 
-        public virtual DbSet<Plate> Plate { get; set; }
+        public virtual DbSet<Plate> Plates { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
