@@ -2,6 +2,7 @@
 using System.Configuration;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using DatabaseReferencing;
 
 namespace chiasma_ef_core.Data
 {
@@ -22,8 +23,11 @@ namespace chiasma_ef_core.Data
         {
             if (!optionsBuilder.IsConfigured)
             {
-                var con = ConfigurationManager.ConnectionStrings["DevDb"].ConnectionString;
-                optionsBuilder.UseSqlServer(ConfigurationManager.ConnectionStrings["DevDb"].ConnectionString);
+                var dbReference = new DatabaseReference();
+                var dbName = dbReference.GenerateDatabaseName();
+                var conString = ConfigurationManager.ConnectionStrings["DevDb"].ConnectionString;
+                conString = conString.Replace("db_name", dbName);
+                optionsBuilder.UseSqlServer(conString);
             }
         }
 
