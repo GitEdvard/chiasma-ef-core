@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
@@ -21,8 +22,8 @@ namespace chiasma_ef_core.Data
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("data source=130.238.178.226;integrated security=true;initial catalog=gtdb2_devel_ee;");
+                var con = ConfigurationManager.ConnectionStrings["DevDb"].ConnectionString;
+                optionsBuilder.UseSqlServer(ConfigurationManager.ConnectionStrings["DevDb"].ConnectionString);
             }
         }
 
