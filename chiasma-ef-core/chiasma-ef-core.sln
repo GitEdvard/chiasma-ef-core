@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "chiasma-ef-core.Data", "chi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "chiasma-ef-core", "chiasma-ef-core\chiasma-ef-core.csproj", "{A08DAC2B-8EF4-4B8A-A98F-F6F1CAF907F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "chiasma-ef-core.FullData", "chiasma-ef-core.FullData\chiasma-ef-core.FullData.csproj", "{068E153E-6B9E-4785-A0EA-D0FB8438C865}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "chiasma-ef-core.FullData", "chiasma-ef-core.FullData\chiasma-ef-core.FullData.csproj", "{9CE7ADFC-712A-4B89-9EAC-7F7D7128AF7B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{A08DAC2B-8EF4-4B8A-A98F-F6F1CAF907F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A08DAC2B-8EF4-4B8A-A98F-F6F1CAF907F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A08DAC2B-8EF4-4B8A-A98F-F6F1CAF907F7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{068E153E-6B9E-4785-A0EA-D0FB8438C865}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{068E153E-6B9E-4785-A0EA-D0FB8438C865}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{068E153E-6B9E-4785-A0EA-D0FB8438C865}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{068E153E-6B9E-4785-A0EA-D0FB8438C865}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CE7ADFC-712A-4B89-9EAC-7F7D7128AF7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CE7ADFC-712A-4B89-9EAC-7F7D7128AF7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CE7ADFC-712A-4B89-9EAC-7F7D7128AF7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CE7ADFC-712A-4B89-9EAC-7F7D7128AF7B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
