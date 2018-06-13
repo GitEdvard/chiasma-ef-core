@@ -77,6 +77,8 @@ namespace chiasma_ef_core.Data
                     .HasMaxLength(30)
                     .IsUnicode(false)
                     .HasDefaultValueSql("('Active')");
+
+                entity.Property(e => e.TestColumn).HasColumnName("test_column");
             });
         }
     }
