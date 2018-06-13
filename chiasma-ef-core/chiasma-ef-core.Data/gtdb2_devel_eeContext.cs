@@ -2,6 +2,8 @@
 using System.Configuration;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Logging.Console;
 using DatabaseReferencing;
 
 namespace chiasma_ef_core.Data
@@ -17,6 +19,15 @@ namespace chiasma_ef_core.Data
         {
         }
 
+        public static readonly LoggerFactory MyConsoleLoggerFactory
+            = new LoggerFactory(new[] {
+              new ConsoleLoggerProvider((category, level)
+                => category == DbLoggerCategory.Database.Command.Name
+               && level == LogLevel.Information, true) });
+        //   public static readonly LoggerFactory MyConsoleLoggerFactory
+        //= new LoggerFactory(new[] { new ConsoleLoggerProvider((_, __) => true, true) });
+
+
         public virtual DbSet<Plate> Plates { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -27,7 +38,10 @@ namespace chiasma_ef_core.Data
                 var dbName = dbReference.GenerateDatabaseName();
                 var conString = ConfigurationManager.ConnectionStrings["DevDb"].ConnectionString;
                 conString = conString.Replace("db_name", dbName);
-                optionsBuilder.UseSqlServer(conString);
+                optionsBuilder
+                    .UseLoggerFactory(MyConsoleLoggerFactory)
+                    .EnableSensitiveDataLogging(true)
+                    .UseSqlServer(conString);
             }
         }
 
