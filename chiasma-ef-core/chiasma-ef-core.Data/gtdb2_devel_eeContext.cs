@@ -42,6 +42,8 @@ namespace chiasma_ef_core.Data
                     .UseLoggerFactory(MyConsoleLoggerFactory)
                     .EnableSensitiveDataLogging(true)
                     .UseSqlServer(conString);
+                //optionsBuilder
+                //    .UseSqlServer("data source=130.238.178.226;integrated security=true;initial catalog=GTDB2_devel_ee;");
             }
         }
 
