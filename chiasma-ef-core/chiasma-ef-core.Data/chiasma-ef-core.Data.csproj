@@ -136,6 +136,19 @@
     <Compile Include="DatabaseReferencing\DatabaseReference.cs" />
     <Compile Include="DatabaseReferencing\InitialsProvider.cs" />
     <Compile Include="gtdb2_devel_eeContext.cs" />
+    <Compile Include="Migrations\20180614054539_init.cs" />
+    <Compile Include="Migrations\20180614054539_init.designer.cs">
+      <DependentUpon>20180614054539_init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20180614060118_first-migration.cs" />
+    <Compile Include="Migrations\20180614060118_first-migration.designer.cs">
+      <DependentUpon>20180614060118_first-migration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20180614061829_second-migration.cs" />
+    <Compile Include="Migrations\20180614061829_second-migration.designer.cs">
+      <DependentUpon>20180614061829_second-migration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\gtdb2_devel_eeContextModelSnapshot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings1.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -158,9 +171,7 @@
       <Name>chiasma-ef-core.Domain</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Migrations\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
