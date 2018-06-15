@@ -124,7 +124,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Domain\BeadChipInfo.cs" />
+    <Compile Include="Domain\BeadChipType.cs" />
+    <Compile Include="Domain\Contact.cs" />
+    <Compile Include="gtdb2_devel_eeContext.cs" />
+    <Compile Include="Domain\Plate.cs" />
+    <Compile Include="Domain\PlateType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Domain\SampleSeries.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
