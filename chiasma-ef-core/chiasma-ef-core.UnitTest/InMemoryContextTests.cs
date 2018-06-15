@@ -3,9 +3,6 @@ using Microsoft.EntityFrameworkCore;
 using chiasma_ef_core.Data;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Console;
-using Microsoft.Extensions.Logging.Debug;
-using System.Diagnostics;
-using System;
 
 namespace chiasma_ef_core.UnitTest
 {
