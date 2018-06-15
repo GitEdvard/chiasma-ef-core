@@ -61,6 +61,9 @@ namespace chiasma_ef_core.Data
                     .HasColumnName("plate_id")
                     .ValueGeneratedNever();
 
+               // Added self. Think it should be so...
+                entity.HasKey(p => p.PlateId);
+
                 entity.Property(e => e.BeadChipInfoId).HasColumnName("bead_chip_info_id");
 
                 entity.Property(e => e.Comment)
