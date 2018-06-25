@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "chiasma-ef-core.Integration
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "chiasma-ef-core.Data.PlateWithPrincipals", "chiasma-ef-core.Data.PlateWithPrincipals\chiasma-ef-core.Data.PlateWithPrincipals.csproj", "{AE8B4DD2-1746-44C2-AB9A-FC87A6BEF094}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hello-IOC", "Hello-IOC\Hello-IOC.csproj", "{336841A2-5FC0-4BCD-AC16-3D2149013257}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{AE8B4DD2-1746-44C2-AB9A-FC87A6BEF094}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE8B4DD2-1746-44C2-AB9A-FC87A6BEF094}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AE8B4DD2-1746-44C2-AB9A-FC87A6BEF094}.Release|Any CPU.Build.0 = Release|Any CPU
+		{336841A2-5FC0-4BCD-AC16-3D2149013257}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{336841A2-5FC0-4BCD-AC16-3D2149013257}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{336841A2-5FC0-4BCD-AC16-3D2149013257}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{336841A2-5FC0-4BCD-AC16-3D2149013257}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
